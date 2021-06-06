@@ -1,0 +1,10 @@
+cluster_name: 'Test Cluster'
+partitioner: org.apache.cassandra.dht.Murmur3Partitioner
+commitlog_sync: periodic
+commitlog_sync_period_in_ms: 10000
+seed_provider:
+    - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+      parameters:
+          - seeds: "172.17.0.2"
+listen_address: 172.17.0.2
+endpoint_snitch: SimpleSnitch
